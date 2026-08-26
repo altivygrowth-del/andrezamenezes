@@ -16,8 +16,8 @@
       --cream:#F7EEDF;
       --cream-2:#FFF9F1;
       --paper:#F2E2D0;
-      --orange:#E48A19;
-      --orange-dark:#C96718;
+      --orange:#FF9D00;
+      --orange-dark:#E85D04;
       --terracotta:#A94E25;
       --brown:#4A281B;
       --brown-2:#2E1A13;
@@ -52,6 +52,14 @@
       text-transform:uppercase;
       font-weight:600;
       color:var(--orange-dark);
+    }
+    .hero .eyebrow{
+      display:inline-block;
+      color:#FFF7E8;
+      background:rgba(74,40,27,.20);
+      border:1px solid rgba(255,255,255,.28);
+      padding:8px 13px;
+      border-radius:999px;
     }
 
     /* HEADER */
@@ -129,8 +137,9 @@
       padding:150px 0 90px;
       position:relative;
       background:
-        radial-gradient(circle at 85% 25%,rgba(228,138,25,.14),transparent 28%),
-        linear-gradient(120deg,var(--cream-2) 0%,var(--cream) 100%);
+        radial-gradient(circle at 12% 12%, rgba(255,191,45,.55), transparent 28%),
+        radial-gradient(circle at 88% 82%, rgba(199,54,0,.38), transparent 32%),
+        linear-gradient(135deg, #FF8A00 0%, #F46A05 52%, #D94B08 100%);
     }
     .hero-grid{
       display:grid;
@@ -141,6 +150,7 @@
     .hero-copy{padding-bottom:20px}
     .hero-title{
       margin-top:25px;
+      color:#FFF9EF;
       font-family:var(--serif);
       font-weight:400;
       font-size:clamp(52px,7vw,94px);
@@ -149,7 +159,7 @@
       max-width:760px;
     }
     .hero-title em{
-      color:var(--orange-dark);
+      color:#FFF0C7;
       font-style:italic;
       font-weight:300;
     }
@@ -173,13 +183,28 @@
       font-weight:600;
       transition:.25s;
     }
-    .btn-primary{background:var(--orange-dark);color:#fff}
+    .hero .btn-primary{
+      background:var(--brown);
+      color:#FFF;
+      box-shadow:0 12px 30px rgba(74,40,27,.25);
+    }
+    .hero .btn-primary:hover{background:#2E1A13}
+    .hero .btn-outline{
+      border-color:rgba(255,255,255,.7);
+      color:#FFF;
+      background:rgba(255,255,255,.08);
+    }
+    .hero .btn-outline:hover{
+      background:#FFF;
+      color:var(--brown);
+      border-color:#FFF;
+    }
     .btn-primary:hover{background:var(--brown);transform:translateY(-2px)}
     .btn-outline{border:1px solid var(--brown);color:var(--brown)}
     .btn-outline:hover{background:var(--brown);color:#fff}
     .hero-note{
       margin-top:24px;
-      color:#92796A;
+      color:rgba(255,247,230,.72);
       font-size:11px;
       letter-spacing:.04em;
     }
@@ -196,8 +221,8 @@
       position:absolute;
       top:-22px;right:-22px;
       width:125px;height:125px;
-      border-top:1px solid var(--orange);
-      border-right:1px solid var(--orange);
+      border-top:2px solid #FFD166;
+      border-right:2px solid #FFD166;
     }
     .portrait-frame img{
       width:100%;
@@ -205,6 +230,34 @@
       object-fit:cover;
       object-position:center top;
       filter:saturate(.9);
+    }
+    .hero-stamp{
+      position:absolute;
+      z-index:3;
+      top:26px;
+      right:26px;
+      width:86px;
+      height:86px;
+      border-radius:50%;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      background:#FFD166;
+      color:var(--brown);
+      font-family:var(--serif);
+      font-size:17px;
+      line-height:.95;
+      box-shadow:0 10px 25px rgba(74,40,27,.2);
+      transform:rotate(8deg);
+    }
+    .hero-stamp span{
+      margin-top:5px;
+      font-family:var(--sans);
+      font-size:7px;
+      letter-spacing:.12em;
+      font-weight:700;
     }
     .portrait-caption{
       position:absolute;
@@ -752,6 +805,7 @@
 
       <div class="hero-visual reveal">
         <div class="portrait-frame">
+          <div class="hero-stamp">4 LIVROS<br><span>PUBLICADOS</span></div>
           <img src="andreza perfil.jpeg" alt="Andreza Menezes, terapeuta familiar" />
           <div class="portrait-caption">
             <strong>Escuta, orientação e diálogo.</strong>
