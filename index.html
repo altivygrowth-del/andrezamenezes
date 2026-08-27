@@ -369,72 +369,45 @@
       letter-spacing:.08em;
     }
 
-    /* BOOKS */
-    .books{
-      background:var(--cream);
-      position:relative;
-    }
-    .section-head{
-      display:flex;
-      justify-content:space-between;
-      align-items:end;
-      gap:40px;
-      margin-bottom:60px;
-    }
-    .section-head h2{
-      margin-top:14px;
-      font-family:var(--serif);
-      font-size:clamp(42px,5vw,70px);
-      font-weight:400;
-      line-height:.98;
-      letter-spacing:-.045em;
-      max-width:700px;
-    }
-    .section-head h2 em{font-style:italic;color:var(--orange-dark)}
-    .section-desc{
-      max-width:390px;
-      color:var(--muted);
-      font-size:14px;
-    }
-    .books-list{
-      border-top:1px solid var(--line);
-    }
-    .book{
-      display:grid;
-      grid-template-columns:90px 1fr 1.15fr 130px;
-      gap:30px;
-      align-items:center;
-      padding:34px 0;
-      border-bottom:1px solid var(--line);
-      transition:.25s;
-    }
-    .book:hover{padding-left:14px;padding-right:14px;background:rgba(255,253,248,.55)}
-    .book-number{
-      font-family:var(--serif);
-      font-size:28px;
-      color:var(--orange-dark);
-      font-style:italic;
-    }
-    .book h3{
-      font-family:var(--serif);
-      font-size:25px;
-      font-weight:400;
-      line-height:1.1;
-    }
-    .book p{
-      color:var(--muted);
-      font-size:13px;
-      max-width:510px;
-    }
-    .book-link{
-      justify-self:end;
-      font-size:11px;
-      font-weight:600;
-      text-transform:uppercase;
-      letter-spacing:.1em;
-      color:var(--orange-dark);
-    }
-    .book-link::after{content:" ↗"}
+    /* BOOK CAROUSEL */
+    .books{position:relative;overflow:hidden;padding:110px 0 95px;background:#f7eedf;transition:background .8s ease;isolation:isolate}
+    .books::before{content:"";position:absolute;inset:0;z-index:-2;background:radial-gradient(circle at 12% 18%,rgba(255,255,255,.18),transparent 28%),radial-gradient(circle at 88% 80%,rgba(0,0,0,.08),transparent 30%);pointer-events:none}
+    .books::after{content:"";position:absolute;width:520px;height:520px;right:-260px;top:50%;transform:translateY(-50%);border-radius:50%;background:rgba(255,255,255,.08);filter:blur(10px);z-index:-1;pointer-events:none}
+    .books-carousel{position:relative}
+    .book-slide{display:none;min-height:650px;grid-template-columns:minmax(330px,.9fr) minmax(420px,1.1fr);gap:80px;align-items:center;animation:bookFade .65s ease both}
+    .book-slide.active{display:grid}
+    @keyframes bookFade{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+    .book-stage{min-height:600px;position:relative;display:flex;align-items:center;justify-content:center}
+    .book-stage::before{content:"";position:absolute;width:72%;height:22px;left:14%;bottom:45px;border-radius:50%;background:rgba(0,0,0,.26);filter:blur(22px);transform:scaleX(1.1)}
+    .book-cover{position:relative;z-index:2;width:min(430px,82%);max-height:570px;object-fit:contain;object-position:center;filter:drop-shadow(18px 24px 22px rgba(0,0,0,.28));transform:rotate(-1deg);transition:transform .5s ease,filter .5s ease}
+    .book-slide.active .book-cover{animation:bookIn .8s cubic-bezier(.2,.75,.25,1) both}
+    @keyframes bookIn{from{opacity:0;transform:translateY(28px) rotate(-4deg) scale(.96)}to{opacity:1;transform:translateY(0) rotate(-1deg) scale(1)}}
+    .book-cover:hover{transform:translateY(-7px) rotate(0deg);filter:drop-shadow(22px 30px 26px rgba(0,0,0,.3))}
+    .book-info{max-width:650px;padding:15px 0 30px}
+    .book-kicker{display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;margin-bottom:18px}
+    .book-kicker::before{content:"";width:38px;height:2px;background:currentColor}
+    .book-title{font-family:var(--serif);font-size:clamp(44px,5.6vw,78px);line-height:.98;letter-spacing:-.055em;font-weight:400;max-width:720px;margin-bottom:28px}
+    .book-description{font-size:16px;line-height:1.8;max-width:590px;margin-bottom:28px}
+    .book-audience{display:flex;gap:17px;align-items:flex-start;max-width:610px;padding:19px 22px;border-radius:14px;background:rgba(255,255,255,.68);border:1px solid rgba(255,255,255,.42);box-shadow:0 14px 35px rgba(0,0,0,.08);margin-bottom:27px}
+    .book-audience-icon{width:42px;height:42px;flex:0 0 42px;display:grid;place-items:center;border-radius:12px;background:rgba(255,255,255,.75);font-size:21px}
+    .book-audience strong{display:block;font-size:13px;margin-bottom:4px}.book-audience span{display:block;font-size:12px;line-height:1.55;opacity:.82}
+    .book-actions{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+    .book-cta{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 27px;border:0;border-radius:999px;font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;transition:.25s;box-shadow:0 12px 25px rgba(0,0,0,.14)}
+    .book-cta:hover{transform:translateY(-3px);box-shadow:0 16px 30px rgba(0,0,0,.18)}.book-subnote{font-size:11px;opacity:.65}
+    .book-slide[data-theme="01"]{color:#f8f4ee}.book-slide[data-theme="01"] .book-kicker{color:#ff4b1f}.book-slide[data-theme="01"] .book-cta{background:#ff4b1f;color:#fff}.book-slide[data-theme="01"] .book-audience{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.1)}.book-slide[data-theme="01"] .book-audience-icon{background:rgba(255,75,31,.14)}
+    .book-slide[data-theme="02"]{color:#f6fbff}.book-slide[data-theme="02"] .book-kicker{color:#ff4b2b}.book-slide[data-theme="02"] .book-cta{background:#ff4b2b;color:#fff}.book-slide[data-theme="02"] .book-audience{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.12)}.book-slide[data-theme="02"] .book-audience-icon{background:rgba(255,75,43,.14)}
+    .book-slide[data-theme="03"]{color:#3d3028}.book-slide[data-theme="03"] .book-kicker{color:#705b4d}.book-slide[data-theme="03"] .book-cta{background:#705b4d;color:#fff}
+    .book-slide[data-theme="04"]{color:#3b2618}.book-slide[data-theme="04"] .book-kicker{color:#e95b08}.book-slide[data-theme="04"] .book-cta{background:#ed5a0a;color:#fff}.book-slide[data-theme="04"] .book-audience{background:rgba(255,250,236,.72)}
+    .books-nav{position:relative;z-index:5;margin-top:35px;padding:12px 15px 16px;border-radius:20px;background:rgba(255,250,241,.9);border:1px solid rgba(74,40,27,.12);box-shadow:0 18px 45px rgba(74,40,27,.12);backdrop-filter:blur(15px)}
+    .books-tabs{display:grid;grid-template-columns:repeat(4,1fr)}
+    .book-tab{position:relative;min-width:0;display:grid;grid-template-columns:56px 1fr;gap:13px;align-items:center;padding:12px 17px;border:0;border-right:1px solid rgba(74,40,27,.11);background:transparent;color:#5a4438;cursor:pointer;text-align:left;transition:.25s}
+    .book-tab:last-child{border-right:0}.book-tab:hover{background:rgba(255,255,255,.55)}.book-tab.active{background:rgba(255,255,255,.7);box-shadow:inset 0 0 0 1px rgba(74,40,27,.1);border-radius:13px}
+    .book-tab img{width:48px;height:65px;object-fit:cover;object-position:center;border-radius:2px;box-shadow:0 5px 10px rgba(0,0,0,.18)}
+    .book-tab-number{font-family:var(--serif);font-size:22px;line-height:1;margin-bottom:5px}.book-tab-title{display:block;font-size:10px;line-height:1.35;font-weight:600}
+    .book-tab-progress{position:absolute;left:12px;right:12px;bottom:0;height:3px;overflow:hidden;border-radius:10px;background:rgba(74,40,27,.1)}.book-tab-progress span{display:block;width:0;height:100%;background:#e85d04}.book-tab.active .book-tab-progress span{animation:tabProgress 5s linear forwards}@keyframes tabProgress{from{width:0}to{width:100%}}
+    .books-nav-bottom{display:flex;justify-content:space-between;align-items:center;gap:15px;padding:12px 4px 0}.books-arrow{width:40px;height:40px;border:1px solid rgba(74,40,27,.14);background:#fffaf2;color:#4a281b;border-radius:50%;display:grid;place-items:center;cursor:pointer;font-size:20px;transition:.2s}.books-arrow:hover{transform:translateY(-2px);background:#4a281b;color:#fff}.books-timer{flex:1;text-align:center;font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:#765c4d}
+    @media(max-width:900px){.book-slide{grid-template-columns:.8fr 1.2fr;gap:35px;min-height:570px}.book-stage{min-height:520px}.book-cover{width:min(350px,92%)}.book-title{font-size:clamp(38px,6vw,62px)}.books-tabs{grid-template-columns:repeat(2,1fr)}.book-tab:nth-child(2){border-right:0}.book-tab:nth-child(-n+2){border-bottom:1px solid rgba(74,40,27,.11)}}
+    @media(max-width:650px){.books{padding:80px 0 70px}.book-slide,.book-slide.active{grid-template-columns:1fr;gap:10px;min-height:auto}.book-stage{min-height:390px;order:0}.book-cover{width:min(300px,78%);max-height:390px}.book-stage::before{bottom:22px;width:60%;left:20%}.book-info{padding:5px 0 10px;text-align:left}.book-title{font-size:clamp(39px,12vw,58px);margin-bottom:21px}.book-description{font-size:14px;line-height:1.7}.book-audience{padding:16px}.book-tab{grid-template-columns:42px 1fr;gap:9px;padding:10px}.book-tab img{width:38px;height:52px}.book-tab-number{font-size:18px}.book-tab-title{font-size:9px}.books-nav{border-radius:15px;padding:8px 8px 13px}.books-nav-bottom{padding-top:9px}.books-arrow{width:36px;height:36px}.book-actions{gap:12px}.book-subnote{font-size:10px}}
 
     /* ORANGE STATEMENT */
     .statement{
@@ -881,52 +854,31 @@
   </section>
 
   <!-- LIVROS -->
-  <section class="section books" id="livros">
-    <div class="container">
-
-      <div class="section-head reveal">
-        <div>
-          <div class="eyebrow">Livros & publicações</div>
-          <h2>Conhecimento que<br>vai além <em>do consultório.</em></h2>
-        </div>
-        <p class="section-desc">
-          Quatro livros para pais, educadores e adolescentes. Conteúdo acessível
-          para ajudar a transformar conversas difíceis em possibilidades de conexão.
-        </p>
-      </div>
-
-      <div class="books-list">
-
-        <article class="book reveal">
-          <div class="book-number">01</div>
-          <h3>Não mexa no meu celular</h3>
-          <p>Para famílias que querem compreender a relação dos filhos com a tecnologia — sem conflito, com diálogo.</p>
-          <a class="book-link" href="https://sun.eduzz.com/89AXVZ750D" target="_blank" rel="noopener">Ver livro</a>
-        </article>
-
-        <article class="book reveal">
-          <div class="book-number">02</div>
-          <h3>Cliques e Curtidas</h3>
-          <p>Redes sociais, autoestima e adolescência. Um guia para entender melhor o mundo digital dos seus filhos.</p>
-          <a class="book-link" href="https://sun.eduzz.com/797Z2PPA0E" target="_blank" rel="noopener">Ver livro</a>
-        </article>
-
-        <article class="book reveal">
-          <div class="book-number">03</div>
-          <h3>Desbravando o Adolescente</h3>
-          <p>Um mapa para pais que querem reconectar, compreendendo o que acontece na mente e no coração do adolescente.</p>
-          <a class="book-link" href="https://sun.eduzz.com/2142068" target="_blank" rel="noopener">Ver livro</a>
-        </article>
-
-        <article class="book reveal">
-          <div class="book-number">04</div>
-          <h3>Não é Drama, é Adolescência</h3>
-          <p>Para olhar além do “drama” e compreender um momento delicado e importante do desenvolvimento.</p>
-          <a class="book-link" href="https://sun.eduzz.com/G92KADD7WE" target="_blank" rel="noopener">Ver livro</a>
-        </article>
-
-      </div>
-    </div>
+  <section class="section books" id="livros" aria-label="Livros de Andreza Menezes">
+    <div class="container"><div class="books-carousel" id="booksCarousel">
+      <article class="book-slide active" aria-hidden="false" data-theme="01" data-bg="#171313" data-text="#F8F4EE">
+        <div class="book-stage"><img class="book-cover" src="livro-01-nao-mexa-no-meu-celular.png" alt="Capa do livro Não mexa no meu celular — Andreza Menezes"></div>
+        <div class="book-info"><div class="book-kicker">Livro 01</div><h2 class="book-title">Não mexa no<br>meu celular</h2><p class="book-description">Um guia para famílias que querem compreender tecnologia, privacidade e limites sem transformar o celular em motivo de guerra.</p><div class="book-audience"><div class="book-audience-icon">⌕</div><div><strong>Para pais, mães e responsáveis</strong><span>Orientação prática para proteger os filhos no mundo digital e construir limites com diálogo.</span></div></div><div class="book-actions"><a class="book-cta" href="https://sun.eduzz.com/89AXVZ750D" target="_blank" rel="noopener">Conhecer o livro <span>→</span></a><span class="book-subnote">Privacidade · Segurança · Diálogo</span></div></div>
+      </article>
+      <article class="book-slide" aria-hidden="true" data-theme="02" data-bg="#071B2B" data-text="#F6FBFF">
+        <div class="book-stage"><img class="book-cover" src="livro-02-cliques-e-curtidas.png" alt="Capa do livro Cliques e Curtidas — Andreza Menezes"></div>
+        <div class="book-info"><div class="book-kicker">Livro 02</div><h2 class="book-title">Cliques e<br>Curtidas</h2><p class="book-description">O impacto das redes sociais no cérebro dos nossos adolescentes — um olhar para entender, prevenir e conectar.</p><div class="book-audience"><div class="book-audience-icon">◉</div><div><strong>Para famílias e educadores</strong><span>Um guia para compreender melhor o mundo digital, autoestima e os desafios vividos pelos jovens.</span></div></div><div class="book-actions"><a class="book-cta" href="https://sun.eduzz.com/797Z2PPA0E" target="_blank" rel="noopener">Conhecer o livro <span>→</span></a><span class="book-subnote">Entender · Prevenir · Conectar</span></div></div>
+      </article>
+      <article class="book-slide" aria-hidden="true" data-theme="03" data-bg="#D9CABB" data-text="#3D3028">
+        <div class="book-stage"><img class="book-cover" src="livro-03-desbravando-o-adolescente.png" alt="Capa do livro Desbravando o Adolescente — Andreza Menezes"></div>
+        <div class="book-info"><div class="book-kicker">Livro 03</div><h2 class="book-title">Desbravando<br>o Adolescente</h2><p class="book-description">Um guia prático para pais e educadores que desejam compreender e se reconectar com o pré-adolescente ou adolescente.</p><div class="book-audience"><div class="book-audience-icon">◇</div><div><strong>Para pais e educadores</strong><span>Um mapa para compreender o que acontece na mente e no coração do adolescente e caminhar junto.</span></div></div><div class="book-actions"><a class="book-cta" href="https://sun.eduzz.com/2142068" target="_blank" rel="noopener">Conhecer o livro <span>→</span></a><span class="book-subnote">Compreender · Reconectar · Orientar</span></div></div>
+      </article>
+      <article class="book-slide" aria-hidden="true" data-theme="04" data-bg="#EFA51A" data-text="#3B2618">
+        <div class="book-stage"><img class="book-cover" src="livro-04-nao-e-drama-e-adolescencia.png" alt="Capa do livro Não é Drama, é Adolescência — Andreza Muniz"></div>
+        <div class="book-info"><div class="book-kicker">Livro 04</div><h2 class="book-title">Não é Drama,<br>é Adolescência</h2><p class="book-description">Para olhar além do “drama” e compreender um momento delicado e importante do desenvolvimento.</p><div class="book-audience"><div class="book-audience-icon">♡</div><div><strong>Para pais, mães, educadores e todos</strong><span>Que desejam construir relações mais saudáveis e significativas com adolescentes.</span></div></div><div class="book-actions"><a class="book-cta" href="https://sun.eduzz.com/G92KADD7WE" target="_blank" rel="noopener">Conhecer o livro <span>→</span></a><span class="book-subnote">Desenvolvimento · Relação · Conexão</span></div></div>
+      </article>
+      <div class="books-nav" aria-label="Navegação dos livros"><div class="books-tabs">
+        <button class="book-tab active" type="button" data-index="0" aria-label="Mostrar livro 1" aria-selected="true"><img src="livro-01-nao-mexa-no-meu-celular.png" alt=""><span><span class="book-tab-number">01</span><span class="book-tab-title">Não mexa no meu celular</span></span><span class="book-tab-progress"><span></span></span></button>
+        <button class="book-tab" type="button" data-index="1" aria-label="Mostrar livro 2" aria-selected="false"><img src="livro-02-cliques-e-curtidas.png" alt=""><span><span class="book-tab-number">02</span><span class="book-tab-title">Cliques e Curtidas</span></span><span class="book-tab-progress"><span></span></span></button>
+        <button class="book-tab" type="button" data-index="2" aria-label="Mostrar livro 3" aria-selected="false"><img src="livro-03-desbravando-o-adolescente.png" alt=""><span><span class="book-tab-number">03</span><span class="book-tab-title">Desbravando o Adolescente</span></span><span class="book-tab-progress"><span></span></span></button>
+        <button class="book-tab" type="button" data-index="3" aria-label="Mostrar livro 4" aria-selected="false"><img src="livro-04-nao-e-drama-e-adolescencia.png" alt=""><span><span class="book-tab-number">04</span><span class="book-tab-title">Não é Drama, é Adolescência</span></span><span class="book-tab-progress"><span></span></span></button>
+      </div><div class="books-nav-bottom"><button class="books-arrow" id="bookPrev" type="button" aria-label="Livro anterior">←</button><div class="books-timer" id="booksTimer">Troca automática em 05 seg</div><button class="books-arrow" id="bookNext" type="button" aria-label="Próximo livro">→</button></div></div>
+    </div></div>
   </section>
 
   <!-- STATEMENT -->
@@ -1254,6 +1206,55 @@
   }, { threshold: 0.12 });
 
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Carrossel de livros — troca automática a cada 5 segundos
+  const booksSection = document.querySelector('.books');
+  const bookSlides = Array.from(document.querySelectorAll('.book-slide'));
+  const bookTabs = Array.from(document.querySelectorAll('.book-tab'));
+  const bookPrev = document.getElementById('bookPrev');
+  const bookNext = document.getElementById('bookNext');
+  const booksTimer = document.getElementById('booksTimer');
+  let currentBook = 0;
+  let bookInterval = null;
+  let timerInterval = null;
+  let timerStartedAt = 0;
+  const BOOK_DURATION = 5000;
+
+  function setBooksTheme(index){
+    const slide=bookSlides[index];
+    booksSection.style.backgroundColor=slide.dataset.bg;
+    booksTimer.style.color=slide.dataset.text;
+  }
+  function updateBooksTimer(){
+    const remaining=Math.max(0,Math.ceil((BOOK_DURATION-(Date.now()-timerStartedAt))/1000));
+    booksTimer.textContent=`Troca automática em ${String(remaining).padStart(2,'0')} seg`;
+  }
+  function showBook(index,restartTimer=true){
+    currentBook=(index+bookSlides.length)%bookSlides.length;
+    bookSlides.forEach((slide,i)=>{slide.classList.toggle('active',i===currentBook);slide.setAttribute('aria-hidden',i===currentBook?'false':'true');});
+    bookTabs.forEach((tab,i)=>{
+      tab.classList.toggle('active',i===currentBook);
+      tab.setAttribute('aria-selected',i===currentBook?'true':'false');
+      const progress=tab.querySelector('.book-tab-progress span');
+      progress.style.animation='none'; void progress.offsetWidth;
+      if(i===currentBook) progress.style.animation='tabProgress 5s linear forwards';
+    });
+    setBooksTheme(currentBook);
+    if(restartTimer){
+      clearInterval(bookInterval);clearInterval(timerInterval);timerStartedAt=Date.now();updateBooksTimer();
+      bookInterval=setInterval(()=>showBook(currentBook+1,true),BOOK_DURATION);
+      timerInterval=setInterval(updateBooksTimer,250);
+    }
+  }
+  bookTabs.forEach(tab=>tab.addEventListener('click',()=>showBook(Number(tab.dataset.index),true)));
+  bookPrev.addEventListener('click',()=>showBook(currentBook-1,true));
+  bookNext.addEventListener('click',()=>showBook(currentBook+1,true));
+  booksSection.addEventListener('mouseenter',()=>{clearInterval(bookInterval);clearInterval(timerInterval);booksTimer.textContent='Carrossel pausado';});
+  booksSection.addEventListener('mouseleave',()=>{timerStartedAt=Date.now();updateBooksTimer();bookInterval=setInterval(()=>showBook(currentBook+1,true),BOOK_DURATION);timerInterval=setInterval(updateBooksTimer,250);});
+  let touchStartX=0;
+  booksSection.addEventListener('touchstart',e=>{touchStartX=e.changedTouches[0].screenX},{passive:true});
+  booksSection.addEventListener('touchend',e=>{const distance=e.changedTouches[0].screenX-touchStartX;if(Math.abs(distance)>45)showBook(distance<0?currentBook+1:currentBook-1,true)},{passive:true});
+  showBook(0,true);
 
   // Formulário -> WhatsApp
   document.getElementById('contactForm').addEventListener('submit', event => {
