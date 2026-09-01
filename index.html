@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Andreza Menezes — Terapeuta Familiar</title>
-  <meta name="description" content="Andreza Menezes — terapeuta familiar, educadora parental e autora. Adolescência, bullying, parentalidade e relações familiares." />
+  <title>Andreza Menezes — Psicanalista, Educadora Parental & Especialista em Adolescência</title>
+  <meta name="description" content="Andreza Menezes — Psicanalista, pedagoga, educadora parental, autora e especialista em comportamento adolescente e neuropsicopedagogia." />
   <meta name="theme-color" content="#4A281B" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&display=swap" rel="stylesheet" />
 
   <style>
     :root{
@@ -98,7 +98,7 @@
     .nav-links{
       display:flex;
       align-items:center;
-      gap:30px;
+      gap:24px;
       list-style:none;
     }
     .nav-links a{
@@ -153,7 +153,7 @@
       color:#FFF9EF;
       font-family:var(--serif);
       font-weight:400;
-      font-size:clamp(52px,7vw,94px);
+      font-size:clamp(48px,6.5vw,88px);
       line-height:.98;
       letter-spacing:-.055em;
       max-width:760px;
@@ -166,7 +166,7 @@
     .hero-text{
       max-width:570px;
       margin:31px 0 35px;
-      color:var(--muted);
+      color:#FFF3E0;
       font-size:17px;
       line-height:1.8;
     }
@@ -199,13 +199,10 @@
       color:var(--brown);
       border-color:#FFF;
     }
-    .btn-primary:hover{background:var(--brown);transform:translateY(-2px)}
-    .btn-outline{border:1px solid var(--brown);color:var(--brown)}
-    .btn-outline:hover{background:var(--brown);color:#fff}
     .hero-note{
       margin-top:24px;
-      color:rgba(255,247,230,.72);
-      font-size:11px;
+      color:rgba(255,247,230,.85);
+      font-size:12px;
       letter-spacing:.04em;
     }
     .hero-visual{position:relative}
@@ -236,8 +233,8 @@
       z-index:3;
       top:26px;
       right:26px;
-      width:86px;
-      height:86px;
+      width:92px;
+      height:92px;
       border-radius:50%;
       display:flex;
       flex-direction:column;
@@ -247,13 +244,14 @@
       background:#FFD166;
       color:var(--brown);
       font-family:var(--serif);
-      font-size:17px;
-      line-height:.95;
+      font-size:15px;
+      line-height:1;
       box-shadow:0 10px 25px rgba(74,40,27,.2);
       transform:rotate(8deg);
+      font-weight:600;
     }
     .hero-stamp span{
-      margin-top:5px;
+      margin-top:3px;
       font-family:var(--sans);
       font-size:7px;
       letter-spacing:.12em;
@@ -266,15 +264,15 @@
       background:var(--brown);
       color:var(--white);
       padding:17px 21px;
-      max-width:225px;
+      max-width:240px;
       box-shadow:0 15px 40px rgba(46,26,19,.18);
     }
     .portrait-caption strong{
       display:block;
       font-family:var(--serif);
-      font-size:20px;
+      font-size:19px;
       font-weight:400;
-      line-height:1.15;
+      line-height:1.2;
     }
     .portrait-caption span{
       display:block;
@@ -300,8 +298,8 @@
     .intro-band .eyebrow{color:#F0A34A}
     .intro-big{
       font-family:var(--serif);
-      font-size:clamp(34px,4.3vw,58px);
-      line-height:1.08;
+      font-size:clamp(32px,4.1vw,54px);
+      line-height:1.1;
       font-weight:300;
       letter-spacing:-.035em;
       max-width:900px;
@@ -311,23 +309,50 @@
       margin-top:28px;
       color:#E6D1C0;
       max-width:690px;
-      font-size:15px;
+      font-size:16px;
+      line-height:1.7;
+    }
+    .motto-badge{
+      display:inline-block;
+      margin-top:20px;
+      padding:8px 16px;
+      background:rgba(240,163,74,.15);
+      border:1px solid rgba(240,163,74,.3);
+      color:#F0A34A;
+      font-size:13px;
+      border-radius:999px;
+      font-weight:500;
     }
 
-    /* ABOUT */
+    /* SECTION GENERAL */
     .section{padding:125px 0}
-    .about{
-      background:var(--cream-2);
+    .section-head{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:50px;
+      margin-bottom:60px;
+      align-items:end;
     }
+    .section-head h2{
+      font-family:var(--serif);
+      font-size:clamp(36px,4.5vw,58px);
+      line-height:1.05;
+      font-weight:400;
+      letter-spacing:-.03em;
+      margin-top:10px;
+    }
+    .section-head h2 em{color:var(--orange-dark);font-style:italic}
+    .section-desc{color:var(--muted);font-size:15px;line-height:1.7}
+
+    /* SOBRE */
+    .about{background:var(--cream-2)}
     .about-grid{
       display:grid;
       grid-template-columns:.8fr 1.2fr;
-      gap:100px;
+      gap:90px;
       align-items:center;
     }
-    .about-image{
-      position:relative;
-    }
+    .about-image{position:relative}
     .about-image img{
       width:100%;
       aspect-ratio:4/5;
@@ -343,7 +368,7 @@
     }
     .about-copy h2{
       font-family:var(--serif);
-      font-size:clamp(40px,5vw,67px);
+      font-size:clamp(38px,4.8vw,64px);
       line-height:1.02;
       font-weight:400;
       letter-spacing:-.045em;
@@ -362,11 +387,108 @@
       border-top:1px solid var(--line);
       display:flex;
       flex-wrap:wrap;
-      gap:10px 28px;
+      gap:12px 24px;
       color:var(--brown);
       font-size:11px;
       text-transform:uppercase;
       letter-spacing:.08em;
+      font-weight:600;
+    }
+    .values-list{
+      margin-top:25px;
+      display:grid;
+      grid-template-columns:repeat(2, 1fr);
+      gap:12px;
+      background:var(--cream);
+      padding:20px;
+      border-radius:8px;
+    }
+    .value-item{
+      display:flex;
+      align-items:center;
+      gap:8px;
+      font-size:13px;
+      color:var(--brown);
+      font-weight:500;
+    }
+    .value-item::before{content:"✦";color:var(--orange-dark);font-size:10px}
+
+    /* DESTAQUE: MENTORIA & ADOLESCENTE */
+    .highlights-section{
+      background:var(--cream);
+      padding:100px 0;
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+    }
+    .highlights-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:40px;
+    }
+    .highlight-card{
+      background:var(--white);
+      padding:40px;
+      border:1px solid rgba(74,40,27,.12);
+      border-radius:4px;
+      box-shadow:0 10px 30px rgba(74,40,27,.04);
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+    }
+    .highlight-card h3{
+      font-family:var(--serif);
+      font-size:28px;
+      color:var(--brown);
+      margin:12px 0;
+      font-weight:400;
+    }
+    .highlight-card p{
+      color:var(--muted);
+      font-size:15px;
+      line-height:1.7;
+      margin-bottom:24px;
+    }
+
+    /* DEPOIMENTOS */
+    .testimonials{
+      background:var(--cream-2);
+      padding:110px 0;
+    }
+    .testimonials-grid{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:30px;
+      margin-top:40px;
+    }
+    .testimonial-card{
+      background:var(--white);
+      padding:32px;
+      border-left:4px solid var(--orange-dark);
+      border-top:1px solid var(--line);
+      border-right:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+      box-shadow:0 10px 25px rgba(74,40,27,.05);
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+    }
+    .testimonial-quote{
+      font-size:15px;
+      color:var(--text);
+      font-style:italic;
+      line-height:1.75;
+      margin-bottom:20px;
+    }
+    .testimonial-author{
+      font-size:13px;
+      font-weight:700;
+      color:var(--brown);
+      display:block;
+    }
+    .testimonial-role{
+      font-size:11px;
+      color:var(--muted);
+      display:block;
     }
 
     /* BOOK CAROUSEL */
@@ -406,8 +528,6 @@
     .book-tab-number{font-family:var(--serif);font-size:22px;line-height:1;margin-bottom:5px}.book-tab-title{display:block;font-size:10px;line-height:1.35;font-weight:600}
     .book-tab-progress{position:absolute;left:12px;right:12px;bottom:0;height:3px;overflow:hidden;border-radius:10px;background:rgba(74,40,27,.1)}.book-tab-progress span{display:block;width:0;height:100%;background:#e85d04}.book-tab.active .book-tab-progress span{animation:tabProgress 5s linear forwards}@keyframes tabProgress{from{width:0}to{width:100%}}
     .books-nav-bottom{display:flex;justify-content:space-between;align-items:center;gap:15px;padding:12px 4px 0}.books-arrow{width:40px;height:40px;border:1px solid rgba(74,40,27,.14);background:#fffaf2;color:#4a281b;border-radius:50%;display:grid;place-items:center;cursor:pointer;font-size:20px;transition:.2s}.books-arrow:hover{transform:translateY(-2px);background:#4a281b;color:#fff}.books-timer{flex:1;text-align:center;font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:#765c4d}
-    @media(max-width:900px){.book-slide{grid-template-columns:.8fr 1.2fr;gap:35px;min-height:570px}.book-stage{min-height:520px}.book-cover{width:min(350px,92%)}.book-title{font-size:clamp(38px,6vw,62px)}.books-tabs{grid-template-columns:repeat(2,1fr)}.book-tab:nth-child(2){border-right:0}.book-tab:nth-child(-n+2){border-bottom:1px solid rgba(74,40,27,.11)}}
-    @media(max-width:650px){.books{padding:80px 0 70px}.book-slide,.book-slide.active{grid-template-columns:1fr;gap:10px;min-height:auto}.book-stage{min-height:390px;order:0}.book-cover{width:min(300px,78%);max-height:390px}.book-stage::before{bottom:22px;width:60%;left:20%}.book-info{padding:5px 0 10px;text-align:left}.book-title{font-size:clamp(39px,12vw,58px);margin-bottom:21px}.book-description{font-size:14px;line-height:1.7}.book-audience{padding:16px}.book-tab{grid-template-columns:42px 1fr;gap:9px;padding:10px}.book-tab img{width:38px;height:52px}.book-tab-number{font-size:18px}.book-tab-title{font-size:9px}.books-nav{border-radius:15px;padding:8px 8px 13px}.books-nav-bottom{padding-top:9px}.books-arrow{width:36px;height:36px}.book-actions{gap:12px}.book-subnote{font-size:10px}}
 
     /* ORANGE STATEMENT */
     .statement{
@@ -423,7 +543,7 @@
     }
     .statement h2{
       font-family:var(--serif);
-      font-size:clamp(45px,6vw,84px);
+      font-size:clamp(42px,5.8vw,80px);
       font-weight:400;
       line-height:.98;
       letter-spacing:-.05em;
@@ -444,7 +564,7 @@
     }
     .service{
       display:grid;
-      grid-template-columns:80px 1fr 1fr;
+      grid-template-columns:80px 1.2fr 1fr;
       gap:35px;
       padding:34px 0;
       border-bottom:1px solid var(--line);
@@ -458,7 +578,7 @@
     }
     .service h3{
       font-family:var(--serif);
-      font-size:27px;
+      font-size:25px;
       font-weight:400;
       line-height:1.15;
     }
@@ -691,21 +811,19 @@
       .nav-cta{text-align:center}
       .menu-btn{display:flex}
       .hero{padding-top:120px}
-      .hero-grid,.about-grid,.contact-grid,.intro-grid,.statement-inner{grid-template-columns:1fr;gap:50px}
+      .hero-grid,.about-grid,.contact-grid,.intro-grid,.statement-inner,.section-head,.highlights-grid,.testimonials-grid{grid-template-columns:1fr;gap:40px}
       .hero-visual{order:-1}
       .portrait-frame{margin:0 auto;max-width:430px}
       .portrait-caption{left:-10px}
       .section{padding:85px 0}
-      .book{grid-template-columns:55px 1fr;gap:18px}
-      .book p{grid-column:2}
-      .book-link{grid-column:2;justify-self:start}
       .service{grid-template-columns:55px 1fr;gap:18px}
       .service p{grid-column:2}
       .steps{grid-template-columns:1fr 1fr}
       .step{margin-right:20px;margin-bottom:20px}
+      .values-list{grid-template-columns:1fr}
     }
     @media(max-width:560px){
-      .hero-title{font-size:51px}
+      .hero-title{font-size:46px}
       .hero-text{font-size:15px}
       .portrait-frame{padding:8px}
       .portrait-caption{position:relative;left:auto;bottom:auto;margin-top:10px;max-width:none}
@@ -727,14 +845,15 @@
   <div class="container nav">
     <a href="#" class="brand" aria-label="Andreza Menezes">
       <strong>Andreza Menezes</strong>
-      <span>Terapeuta Familiar · Autora</span>
+      <span>Psicanalista · Educadora Parental</span>
     </a>
 
     <ul class="nav-links" id="navLinks">
       <li><a href="#sobre">Sobre</a></li>
-      <li><a href="#livros">Livros</a></li>
+      <li><a href="#programas">Mentoria & Jovens</a></li>
       <li><a href="#atuacao">Como ajudo</a></li>
-      <li><a href="#processo">Como funciona</a></li>
+      <li><a href="#livros">Livros</a></li>
+      <li><a href="#depoimentos">Depoimentos</a></li>
       <li><a href="#faq">Dúvidas</a></li>
       <li><a href="#contato" class="nav-cta">Conversar comigo</a></li>
     </ul>
@@ -752,7 +871,7 @@
     <div class="container hero-grid">
 
       <div class="hero-copy reveal">
-        <div class="eyebrow">Terapeuta familiar · Adolescência · Parentalidade</div>
+        <div class="eyebrow">Psicanálise · Comportamento Adolescente · Parentalidade Consciente</div>
 
         <h1 class="hero-title">
           A adolescência<br>
@@ -761,28 +880,26 @@
         </h1>
 
         <p class="hero-text">
-          Criar filhos hoje, entre telas, redes sociais, pressão escolar e tantas
-          mudanças, pode ser desafiador. Existe um caminho possível para reconstruir
-          diálogo, presença e conexão.
+          Acolher, orientar e fortalecer famílias, adolescentes e educadores por meio da escuta terapêutica, da educação emocional e do afeto. Existe um caminho para a reconexão.
         </p>
 
         <div class="actions">
-          <a class="btn btn-primary" href="https://wa.me/554198000034?text=Ol%C3%A1.%20Vi%20o%20site%20da%20Andreza%20e%20gostaria%20de%20saber%20mais%20sobre%20uma%20primeira%20conversa." target="_blank" rel="noopener">
+          <a class="btn btn-primary" href="https://wa.me/554198000034?text=Ol%C3%A1%2C%20Andreza!%20Vi%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20atendimento." target="_blank" rel="noopener">
             Quero conversar →
           </a>
           <a class="btn btn-outline" href="#sobre">Conhecer Andreza</a>
         </div>
 
-        <div class="hero-note">CRP {{CRP}} · Atendimento presencial e online</div>
+        <div class="hero-note">Atendimento presencial em Guaratuba/PR e online para todo o Brasil</div>
       </div>
 
       <div class="hero-visual reveal">
         <div class="portrait-frame">
-          <div class="hero-stamp">4 LIVROS<br><span>PUBLICADOS</span></div>
-          <img src="andreza perfil.jpeg" alt="Andreza Menezes, terapeuta familiar" />
+          <div class="hero-stamp">+5 ANOS<br><span>DE EXPERIÊNCIA</span></div>
+          <img src="andreza perfil.jpeg" alt="Andreza Menezes, psicanalista e educadora parental" />
           <div class="portrait-caption">
-            <strong>Escuta, orientação e diálogo.</strong>
-            <span>Pais · Educadores · Adolescentes</span>
+            <strong>Escuta, acolhimento e orientação.</strong>
+            <span>Mães · Famílias · Educadores · Adolescentes</span>
           </div>
         </div>
       </div>
@@ -790,30 +907,29 @@
     </div>
   </section>
 
-  <!-- MANIFESTO -->
+  <!-- MANIFESTO / MISSÃO -->
   <section class="intro-band">
     <div class="container intro-grid">
-      <div class="eyebrow">Um outro jeito de olhar</div>
+      <div class="eyebrow">Missão & Propósito</div>
       <div>
         <div class="intro-big">
           Antes de tentar mudar o comportamento,
           precisamos entender <em>o que existe por trás dele.</em>
         </div>
         <p class="intro-small">
-          Meu trabalho nasce do diálogo: criar um espaço em que pais, educadores
-          e adolescentes possam falar, ser ouvidos e encontrar caminhos mais
-          conscientes para se relacionar.
+          Promover vínculos saudáveis, consciência parental e transformação social através do afeto e do conhecimento. Unindo neurociência, sensibilidade e autoconhecimento para despertar autonomia e maturidade.
         </p>
+        <div class="motto-badge">Lema: Transformar vínculos, conectar histórias, fortalecer pessoas.</div>
       </div>
     </div>
   </section>
 
-  <!-- SOBRE -->
+  <!-- SOBRE ME -->
   <section class="section about" id="sobre">
     <div class="container about-grid">
 
       <div class="about-image reveal">
-        <img src="andreza 2.jpeg" alt="Consultório de Andreza Menezes" />
+        <img src="andreza 2.jpeg" alt="Andreza Menezes em seu consultório" />
       </div>
 
       <div class="about-copy reveal">
@@ -821,64 +937,162 @@
 
         <h2>
           Andreza Menezes.<br>
-          <em>Terapeuta de famílias</em><br>
-          que acreditam no diálogo.
+          <em>Psicanalista e Educadora</em><br>
+          dedicada às famílias.
         </h2>
 
         <p>
-          Sou terapeuta especializada em família, adolescência e dinâmicas
-          escolares. Acredito que a família é o primeiro — e mais importante —
-          projeto de transformação que podemos construir.
+          Sou mãe, psicanalista, pedagoga e especialista em comportamento adolescente, neuropsicopedagogia e facilitadora em Parentalidade Consciente. Há mais de 5 anos acompanho famílias, escolas e adolescentes, unindo neurociência, sensibilidade e acolhimento.
         </p>
 
         <p>
-          Ao longo da minha trajetória, acompanhei pais que estavam perdidos
-          diante dos filhos adolescentes, educadores que não sabiam como lidar
-          com situações de bullying e adolescentes que precisavam de um espaço
-          seguro para serem ouvidos.
+          Autora do livro <em>Desbravando o Adolescente</em>, coautora de <em>Ser Mais Educador Parental</em> e criadora do grupo terapêutico <strong>AdolescenteMente</strong> e do projeto <strong>Curando-se</strong>.
         </p>
 
-        <p>
-          Também sou autora de quatro livros sobre adolescência, tecnologia e
-          parentalidade — levando orientação prática para além dos atendimentos.
-        </p>
+        <div class="values-list">
+          <div class="value-item">Transformar pessoas</div>
+          <div class="value-item">Fortalecer relações</div>
+          <div class="value-item">Comunicar com afeto</div>
+          <div class="value-item">Desenvolvimento com propósito</div>
+          <div class="value-item">Respeito aos limites</div>
+          <div class="value-item">Ética, sensibilidade e leveza</div>
+        </div>
 
         <div class="credentials">
-          <span>Educadora Parental</span>
           <span>Psicanalista</span>
-          <span>CRP {{CRP}}</span>
+          <span>Pedagoga</span>
+          <span>Neuropsicopedagoga</span>
+          <span>Parentalidade Consciente</span>
         </div>
       </div>
 
     </div>
   </section>
 
+  <!-- HIGHLIGHTS / DESTAQUES -->
+  <section class="highlights-section" id="programas">
+    <div class="container">
+      <div class="highlights-grid">
+        <div class="highlight-card reveal">
+          <div>
+            <div class="eyebrow">Para Mães e Pais</div>
+            <h3>🤝 Venha fazer mentoria</h3>
+            <p>
+              Um espaço seguro, profundo e prático para mães, pais e mulheres que desejam se reconectar com sua essência, compreender seus filhos com mais empatia e construir relações mais leves e conscientes.
+            </p>
+          </div>
+          <a class="btn btn-primary" href="https://wa.me/554198000034?text=Gostaria%20de%20saber%20mais%20sobre%20a%20Mentoria%20Parental." target="_blank" rel="noopener">Saber mais sobre a Mentoria →</a>
+        </div>
+
+        <div class="highlight-card reveal">
+          <div>
+            <div class="eyebrow">Para o seu filho(a)</div>
+            <h3>🌱 Desenvolvimento para o Adolescente</h3>
+            <p>
+              Acompanhamento terapêutico e programas personalizados que ajudam o adolescente a lidar com suas emoções, desenvolver autoestima, melhorar relações familiares e se preparar para a vida com segurança e clareza.
+            </p>
+          </div>
+          <a class="btn btn-outline" href="https://wa.me/554198000034?text=Gostaria%20de%20saber%20mais%20sobre%20o%20Acompanhamento%20para%20Adolescentes." target="_blank" rel="noopener">Saber mais sobre o Acompanhamento →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS / COMO AJUDO -->
+  <section class="section services" id="atuacao">
+    <div class="container">
+
+      <div class="section-head reveal">
+        <div>
+          <div class="eyebrow">O que ofereço</div>
+          <h2>Áreas de atuação e<br><em>soluções terapêuticas.</em></h2>
+        </div>
+        <p class="section-desc">
+          Atendimentos e programas desenhados para acolher as demandas individuais, familiares e escolares, promovendo saúde emocional e fortalecimento de vínculos.
+        </p>
+      </div>
+
+      <div class="services-list">
+
+        <article class="service reveal">
+          <div class="service-num">01</div>
+          <h3>🧠 Terapia Individual</h3>
+          <p>Atendimento terapêutico com base na psicanálise e inteligência emocional. Espaço de acolhimento, escuta e desenvolvimento pessoal direcionado a adolescentes, mulheres e mães.</p>
+        </article>
+
+        <article class="service reveal">
+          <div class="service-num">02</div>
+          <h3>🌸 Terapia em Grupo</h3>
+          <p>Encontros terapêuticos temáticos que promovem partilhas, autoconhecimento e crescimento coletivo. Grupos focados em mulheres, mães e adolescentes.</p>
+        </article>
+
+        <article class="service reveal">
+          <div class="service-num">03</div>
+          <h3>🤝 Mentorias Parentais</h3>
+          <p>Processos práticos e focados para mães e pais construírem autoridade consciente, limites saudáveis e maior conexão com seus filhos.</p>
+        </article>
+
+        <article class="service reveal">
+          <div class="service-num">04</div>
+          <h3>🎓 Treinamento para Professores e Gestores</h3>
+          <p>Formações e oficinas com foco em comportamento, adolescência, saúde mental escolar e práticas de acolhimento e intervenção fundamentadas na neurociência.</p>
+        </article>
+
+        <article class="service reveal">
+          <div class="service-num">05</div>
+          <h3>🎤 Palestras e Workshops</h3>
+          <p>Apresentações impactantes baseadas em ciência e vivência para escolas, empresas e comunidades, visando prevenir conflitos, abordar bullying e fortalecer o diálogo.</p>
+        </article>
+
+        <article class="service reveal">
+          <div class="service-num">06</div>
+          <h3>🌱 Acompanhamento para Adolescentes</h3>
+          <p>Programas voltados para o uso consciente da tecnologia, superação de desafios emocionais, regulação do comportamento e fortalecimento da autoestima.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
   <!-- LIVROS -->
   <section class="section books" id="livros" aria-label="Livros de Andreza Menezes">
-    <div class="container"><div class="books-carousel" id="booksCarousel">
-      <article class="book-slide active" aria-hidden="false" data-theme="01" data-bg="#171313" data-text="#F8F4EE">
-        <div class="book-stage"><img class="book-cover" src="celulare.png" alt="Capa do livro Não mexa no meu celular — Andreza Menezes"></div>
-        <div class="book-info"><div class="book-kicker">Livro 01</div><h2 class="book-title">Não mexa no<br>meu celular</h2><p class="book-description">Um guia para famílias que querem compreender tecnologia, privacidade e limites sem transformar o celular em motivo de guerra.</p><div class="book-audience"><div class="book-audience-icon">⌕</div><div><strong>Para pais, mães e responsáveis</strong><span>Orientação prática para proteger os filhos no mundo digital e construir limites com diálogo.</span></div></div><div class="book-actions"><a class="book-cta" href="https://sun.eduzz.com/89AXVZ750D" target="_blank" rel="noopener">Conhecer o livro <span>→</span></a><span class="book-subnote">Privacidade · Segurança · Diálogo</span></div></div>
-      </article>
-      <article class="book-slide" aria-hidden="true" data-theme="02" data-bg="#071B2B" data-text="#F6FBFF">
-        <div class="book-stage"><img class="book-cover" src="cliques.png" alt="Capa do livro Cliques e Curtidas — Andreza Menezes"></div>
-        <div class="book-info"><div class="book-kicker">Livro 02</div><h2 class="book-title">Cliques e<br>Curtidas</h2><p class="book-description">O impacto das redes sociais no cérebro dos nossos adolescentes — um olhar para entender, prevenir e conectar.</p><div class="book-audience"><div class="book-audience-icon">◉</div><div><strong>Para famílias e educadores</strong><span>Um guia para compreender melhor o mundo digital, autoestima e os desafios vividos pelos jovens.</span></div></div><div class="book-actions"><a class="book-cta" href="https://sun.eduzz.com/797Z2PPA0E" target="_blank" rel="noopener">Conhecer o livro <span>→</span></a><span class="book-subnote">Entender · Prevenir · Conectar</span></div></div>
-      </article>
-      <article class="book-slide" aria-hidden="true" data-theme="03" data-bg="#D9CABB" data-text="#3D3028">
-        <div class="book-stage"><img class="book-cover" src="desbravando.png" alt="Capa do livro Desbravando o Adolescente — Andreza Menezes"></div>
-        <div class="book-info"><div class="book-kicker">Livro 03</div><h2 class="book-title">Desbravando<br>o Adolescente</h2><p class="book-description">Um guia prático para pais e educadores que desejam compreender e se reconectar com o pré-adolescente ou adolescente.</p><div class="book-audience"><div class="book-audience-icon">◇</div><div><strong>Para pais e educadores</strong><span>Um mapa para compreender o que acontece na mente e no coração do adolescente e caminhar junto.</span></div></div><div class="book-actions"><a class="book-cta" href="https://sun.eduzz.com/2142068" target="_blank" rel="noopener">Conhecer o livro <span>→</span></a><span class="book-subnote">Compreender · Reconectar · Orientar</span></div></div>
-      </article>
-      <article class="book-slide" aria-hidden="true" data-theme="04" data-bg="#EFA51A" data-text="#3B2618">
-        <div class="book-stage"><img class="book-cover" src="drame.png" alt="Capa do livro Não é Drama, é Adolescência — Andreza Muniz"></div>
-        <div class="book-info"><div class="book-kicker">Livro 04</div><h2 class="book-title">Não é Drama,<br>é Adolescência</h2><p class="book-description">Para olhar além do “drama” e compreender um momento delicado e importante do desenvolvimento.</p><div class="book-audience"><div class="book-audience-icon">♡</div><div><strong>Para pais, mães, educadores e todos</strong><span>Que desejam construir relações mais saudáveis e significativas com adolescentes.</span></div></div><div class="book-actions"><a class="book-cta" href="https://sun.eduzz.com/G92KADD7WE" target="_blank" rel="noopener">Conhecer o livro <span>→</span></a><span class="book-subnote">Desenvolvimento · Relação · Conexão</span></div></div>
-      </article>
-      <div class="books-nav" aria-label="Navegação dos livros"><div class="books-tabs">
-        <button class="book-tab active" type="button" data-index="0" aria-label="Mostrar livro 1" aria-selected="true"><img src="celulare.png" alt=""><span><span class="book-tab-number">01</span><span class="book-tab-title">Não mexa no meu celular</span></span><span class="book-tab-progress"><span></span></span></button>
-        <button class="book-tab" type="button" data-index="1" aria-label="Mostrar livro 2" aria-selected="false"><img src="cliques.png" alt=""><span><span class="book-tab-number">02</span><span class="book-tab-title">Cliques e Curtidas</span></span><span class="book-tab-progress"><span></span></span></button>
-        <button class="book-tab" type="button" data-index="2" aria-label="Mostrar livro 3" aria-selected="false"><img src="desbravando.png" alt=""><span><span class="book-tab-number">03</span><span class="book-tab-title">Desbravando o Adolescente</span></span><span class="book-tab-progress"><span></span></span></button>
-        <button class="book-tab" type="button" data-index="3" aria-label="Mostrar livro 4" aria-selected="false"><img src="drame.png" alt=""><span><span class="book-tab-number">04</span><span class="book-tab-title">Não é Drama, é Adolescência</span></span><span class="book-tab-progress"><span></span></span></button>
-      </div><div class="books-nav-bottom"><button class="books-arrow" id="bookPrev" type="button" aria-label="Livro anterior">←</button><div class="books-timer" id="booksTimer">Troca automática em 05 seg</div><button class="books-arrow" id="bookNext" type="button" aria-label="Próximo livro">→</button></div></div>
-    </div></div>
+    <div class="container">
+      <div class="books-carousel" id="booksCarousel">
+        <article class="book-slide active" aria-hidden="false" data-theme="01" data-bg="#171313" data-text="#F8F4EE">
+          <div class="book-stage"><img class="book-cover" src="celulare.png" alt="Capa do livro Não mexa no meu celular — Andreza Menezes"></div>
+          <div class="book-info"><div class="book-kicker">Livro 01</div><h2 class="book-title">Não mexa no<br>meu celular</h2><p class="book-description">Um guia para famílias que querem compreender tecnologia, privacidade e limites sem transformar o celular em motivo de guerra.</p><div class="book-audience"><div class="book-audience-icon">⌕</div><div><strong>Para pais, mães e responsáveis</strong><span>Orientação prática para proteger os filhos no mundo digital e construir limites com diálogo.</span></div></div><div class="book-actions"><a class="book-cta" href="https://sun.eduzz.com/89AXVZ750D" target="_blank" rel="noopener">Conhecer o livro <span>→</span></a><span class="book-subnote">Privacidade · Segurança · Diálogo</span></div></div>
+        </article>
+
+        <article class="book-slide" aria-hidden="true" data-theme="02" data-bg="#071B2B" data-text="#F6FBFF">
+          <div class="book-stage"><img class="book-cover" src="cliques.png" alt="Capa do livro Cliques e Curtidas — Andreza Menezes"></div>
+          <div class="book-info"><div class="book-kicker">Livro 02</div><h2 class="book-title">Cliques e<br>Curtidas</h2><p class="book-description">O impacto das redes sociais no cérebro dos nossos adolescentes — um olhar para entender, prevenir e conectar.</p><div class="book-audience"><div class="book-audience-icon">◉</div><div><strong>Para famílias e educadores</strong><span>Um guia para compreender melhor o mundo digital, autoestima e os desafios vividos pelos jovens.</span></div></div><div class="book-actions"><a class="book-cta" href="https://sun.eduzz.com/797Z2PPA0E" target="_blank" rel="noopener">Conhecer o livro <span>→</span></a><span class="book-subnote">Entender · Prevenir · Conectar</span></div></div>
+        </article>
+
+        <article class="book-slide" aria-hidden="true" data-theme="03" data-bg="#D9CABB" data-text="#3D3028">
+          <div class="book-stage"><img class="book-cover" src="desbravando.png" alt="Capa do livro Desbravando o Adolescente — Andreza Menezes"></div>
+          <div class="book-info"><div class="book-kicker">Livro 03 · Autora principal</div><h2 class="book-title">Desbravando<br>o Adolescente</h2><p class="book-description">Um guia prático para pais e educadores que desejam compreender o que acontece na mente e no coração do pré-adolescente e adolescente.</p><div class="book-audience"><div class="book-audience-icon">◇</div><div><strong>Para pais e educadores</strong><span>Um mapa essencial para se reconectar, estabelecer limites saudáveis e caminhar junto.</span></div></div><div class="book-actions"><a class="book-cta" href="https://sun.eduzz.com/2142068" target="_blank" rel="noopener">Conhecer o livro <span>→</span></a><span class="book-subnote">Compreender · Reconectar · Orientar</span></div></div>
+        </article>
+
+        <article class="book-slide" aria-hidden="true" data-theme="04" data-bg="#EFA51A" data-text="#3B2618">
+          <div class="book-stage"><img class="book-cover" src="drame.png" alt="Capa do livro Não é Drama, é Adolescência — Andreza Menezes"></div>
+          <div class="book-info"><div class="book-kicker">Livro 04</div><h2 class="book-title">Não é Drama,<br>é Adolescência</h2><p class="book-description">Para olhar além do "drama" e compreender um momento delicado, intenso e fundamental do desenvolvimento humano.</p><div class="book-audience"><div class="book-audience-icon">♡</div><div><strong>Para famílias e educadores</strong><span>Construa relações mais saudáveis, empáticas e significativas com adolescentes.</span></div></div><div class="book-actions"><a class="book-cta" href="https://sun.eduzz.com/G92KADD7WE" target="_blank" rel="noopener">Conhecer o livro <span>→</span></a><span class="book-subnote">Desenvolvimento · Relação · Conexão</span></div></div>
+        </article>
+
+        <div class="books-nav" aria-label="Navegação dos livros">
+          <div class="books-tabs">
+            <button class="book-tab active" type="button" data-index="0" aria-label="Mostrar livro 1" aria-selected="true"><img src="celulare.png" alt=""><span><span class="book-tab-number">01</span><span class="book-tab-title">Não mexa no meu celular</span></span><span class="book-tab-progress"><span></span></span></button>
+            <button class="book-tab" type="button" data-index="1" aria-label="Mostrar livro 2" aria-selected="false"><img src="cliques.png" alt=""><span><span class="book-tab-number">02</span><span class="book-tab-title">Cliques e Curtidas</span></span><span class="book-tab-progress"><span></span></span></button>
+            <button class="book-tab" type="button" data-index="2" aria-label="Mostrar livro 3" aria-selected="false"><img src="desbravando.png" alt=""><span><span class="book-tab-number">03</span><span class="book-tab-title">Desbravando o Adolescente</span></span><span class="book-tab-progress"><span></span></span></button>
+            <button class="book-tab" type="button" data-index="3" aria-label="Mostrar livro 4" aria-selected="false"><img src="drame.png" alt=""><span><span class="book-tab-number">04</span><span class="book-tab-title">Não é Drama, é Adolescência</span></span><span class="book-tab-progress"><span></span></span></button>
+          </div>
+          <div class="books-nav-bottom">
+            <button class="books-arrow" id="bookPrev" type="button" aria-label="Livro anterior">←</button>
+            <div class="books-timer" id="booksTimer">Troca automática em 05 seg</div>
+            <button class="books-arrow" id="bookNext" type="button" aria-label="Próximo livro">→</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- STATEMENT -->
@@ -890,66 +1104,8 @@
         <em>construir a relação.</em>
       </h2>
       <p class="reveal">
-        Não existe fórmula pronta para uma família. Existe escuta, presença,
-        limite, responsabilidade e disposição para recomeçar quantas vezes forem necessárias.
+        Não existe fórmula pronta para uma família. Existe escuta, presença, limite, responsabilidade e disposição para recomeçar com afeto e orientação.
       </p>
-    </div>
-  </section>
-
-  <!-- COMO AJUDO -->
-  <section class="section services" id="atuacao">
-    <div class="container">
-
-      <div class="section-head reveal">
-        <div>
-          <div class="eyebrow">Como posso ajudar</div>
-          <h2>Algumas das situações<br>que podemos <em>olhar juntos.</em></h2>
-        </div>
-        <p class="section-desc">
-          Cada família tem uma história. O atendimento parte da realidade de cada
-          pessoa, sem julgamentos e sem respostas genéricas.
-        </p>
-      </div>
-
-      <div class="services-list">
-
-        <article class="service reveal">
-          <div class="service-num">01</div>
-          <h3>Uso excessivo de telas</h3>
-          <p>Quando celulares, jogos e redes sociais parecem ter criado uma barreira entre você e seu filho, podemos buscar caminhos para reconstruir limites e diálogo.</p>
-        </article>
-
-        <article class="service reveal">
-          <div class="service-num">02</div>
-          <h3>Bullying e cyberbullying</h3>
-          <p>Suporte para famílias e educadores diante de situações de bullying, exposição, conflitos e impactos emocionais vividos por adolescentes.</p>
-        </article>
-
-        <article class="service reveal">
-          <div class="service-num">03</div>
-          <h3>Distância entre pais e filhos</h3>
-          <p>Quando as conversas se tornam monossílabos, os conflitos aumentam e a sensação é de perda de conexão, é possível reconstruir pontes.</p>
-        </article>
-
-        <article class="service reveal">
-          <div class="service-num">04</div>
-          <h3>Comportamento adolescente</h3>
-          <p>Isolamento, explosões, apatia e mudanças de comportamento podem gerar muitas dúvidas. O primeiro passo é compreender o que está acontecendo.</p>
-        </article>
-
-        <article class="service reveal">
-          <div class="service-num">05</div>
-          <h3>Parentalidade</h3>
-          <p>Para quem deseja exercer autoridade com presença, limites e afeto, sem viver preso à culpa ou à ideia de que precisa acertar sempre.</p>
-        </article>
-
-        <article class="service reveal">
-          <div class="service-num">06</div>
-          <h3>Educadores</h3>
-          <p>Orientações para profissionais que convivem com adolescentes e enfrentam dinâmicas complexas dentro da escola e da sala de aula.</p>
-        </article>
-
-      </div>
     </div>
   </section>
 
@@ -963,8 +1119,7 @@
           <h2>Um espaço seguro.<br><em>Do seu jeito, no seu tempo.</em></h2>
         </div>
         <p class="section-desc">
-          O processo é construído de forma individual, respeitando a necessidade
-          de cada pessoa e cada família.
+          O processo é construído de forma individualizada, respeitando a realidade de cada pessoa e estrutura familiar.
         </p>
       </div>
 
@@ -973,27 +1128,68 @@
         <article class="step reveal">
           <div class="step-num">01</div>
           <h3>Primeira conversa</h3>
-          <p>Um primeiro encontro para você contar o que está vivendo, tirar dúvidas e conhecer a forma de trabalho.</p>
+          <p>Um primeiro contato para você contar o que está vivendo, tirar dúvidas e conhecer a abordagem terapêutica.</p>
         </article>
 
         <article class="step reveal">
           <div class="step-num">02</div>
           <h3>Duração e frequência</h3>
-          <p>Cada sessão tem em média 50 minutos. A frequência é definida conforme a necessidade de cada caso.</p>
+          <p>Cada sessão tem em média 50 minutos. A frequência é definida conforme as necessidades observadas.</p>
         </article>
 
         <article class="step reveal">
           <div class="step-num">03</div>
           <h3>Online ou presencial</h3>
-          <p>Atendimentos presenciais e online. No presencial, o endereço é informado no momento do agendamento.</p>
+          <p>Atendimento presencial em Guaratuba/PR ou online em sala virtual privativa para qualquer local do mundo.</p>
         </article>
 
         <article class="step reveal">
           <div class="step-num">04</div>
           <h3>Sigilo e ética</h3>
-          <p>O atendimento respeita o sigilo profissional e os princípios éticos aplicáveis ao exercício profissional.</p>
+          <p>Todo o processo respeita rigorosamente o sigilo profissional, a ética e o acolhimento sem julgamentos.</p>
         </article>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- DEPOIMENTOS DE CLIENTES -->
+  <section class="section testimonials" id="depoimentos">
+    <div class="container">
+      <div class="section-head reveal">
+        <div>
+          <div class="eyebrow">Depoimentos de Clientes</div>
+          <h2>Histórias de transformação e <em>reconexão.</em></h2>
+        </div>
+        <p class="section-desc">
+          Veja o relato de mães e educadores que transformaram suas relações através do processo terapêutico e orientações.
+        </p>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card reveal">
+          <p class="testimonial-quote">“A Andreza mudou minha forma de enxergar a adolescência. Com seu apoio, aprendi a ouvir meu filho de verdade e me reconectei comigo mesma.”</p>
+          <div>
+            <span class="testimonial-author">Mariana</span>
+            <span class="testimonial-role">Mãe de um adolescente de 15 anos</span>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal">
+          <p class="testimonial-quote">“Me senti acolhida desde o primeiro encontro. A forma como a Andreza conduz o grupo é leve, profunda e transformadora.”</p>
+          <div>
+            <span class="testimonial-author">Eliane</span>
+            <span class="testimonial-role">Mãe de adolescente de 13 anos</span>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal">
+          <p class="testimonial-quote">“As formações da Andreza me ajudaram a compreender melhor meus alunos e a desenvolver práticas mais empáticas na escola.”</p>
+          <div>
+            <span class="testimonial-author">Júlia</span>
+            <span class="testimonial-role">Coordenadora pedagógica</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -1013,41 +1209,21 @@
 
         <div class="faq-item reveal">
           <button class="faq-btn" type="button">
-            <h3>Nunca fui a um atendimento. Por onde começo?</h3>
+            <h3>Nunca fiz acompanhamento terapêutico. Por onde começo?</h3>
             <span class="faq-plus">+</span>
           </button>
           <div class="faq-body">
-            <p>Começar pelo WhatsApp é o caminho mais simples. Você pode contar brevemente o que está vivendo, tirar suas dúvidas e combinar uma primeira conversa.</p>
+            <p>Iniciar pelo WhatsApp é o caminho mais simples. Você pode compartilhar brevemente o momento que está atravessando e agendaremos nossa primeira conversa.</p>
           </div>
         </div>
 
         <div class="faq-item reveal">
           <button class="faq-btn" type="button">
-            <h3>O atendimento aceita convênio?</h3>
+            <h3>O atendimento é individual ou em grupo?</h3>
             <span class="faq-plus">+</span>
           </button>
           <div class="faq-body">
-            <p>Os atendimentos são particulares. Para informações sobre honorários e condições de pagamento, entre em contato diretamente.</p>
-          </div>
-        </div>
-
-        <div class="faq-item reveal">
-          <button class="faq-btn" type="button">
-            <h3>O que eu disser fica em sigilo?</h3>
-            <span class="faq-plus">+</span>
-          </button>
-          <div class="faq-body">
-            <p>O sigilo profissional é um princípio ético fundamental. As informações compartilhadas durante o atendimento são tratadas com confidencialidade, observadas as situações previstas nas normas aplicáveis.</p>
-          </div>
-        </div>
-
-        <div class="faq-item reveal">
-          <button class="faq-btn" type="button">
-            <h3>Atendimento online funciona da mesma forma?</h3>
-            <span class="faq-plus">+</span>
-          </button>
-          <div class="faq-body">
-            <p>O atendimento online acontece por videochamada em ambiente adequado, com atenção e acompanhamento profissional. A modalidade é combinada conforme a necessidade de cada caso.</p>
+            <p>Ofereço ambas as modalidades: Terapia Individual (para adolescentes, mães e mulheres) e Terapia em Grupo (grupos temáticos para mães, mulheres e jovens). Discutimos o melhor formato para a sua necessidade.</p>
           </div>
         </div>
 
@@ -1057,17 +1233,27 @@
             <span class="faq-plus">+</span>
           </button>
           <div class="faq-body">
-            <p>Pais, educadores e adolescentes podem buscar orientação e atendimento. O formato é discutido individualmente, considerando o que faz mais sentido para cada situação.</p>
+            <p>Atendo ambos. Adolescentes têm um espaço individual e sigiloso de escuta, enquanto pais e mães podem passar por orientações e mentorias parentais específicas.</p>
           </div>
         </div>
 
         <div class="faq-item reveal">
           <button class="faq-btn" type="button">
-            <h3>Como funciona o Grupo AdolescenteMente?</h3>
+            <h3>Como funcionam as palestras e treinamentos para escolas?</h3>
             <span class="faq-plus">+</span>
           </button>
           <div class="faq-body">
-            <p>O AdolescenteMente é um grupo no WhatsApp com conteúdo sobre adolescência, parentalidade e família, aberto para pais e educadores que desejam acompanhar orientações e novidades.</p>
+            <p>Realizo formações e oficinas personalizadas para professores, gestores e alunos, com temas como saúde mental escolar, neurociência, comportamento e prevenção ao bullying.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-btn" type="button">
+            <h3>Como funciona o grupo AdolescenteMente?</h3>
+            <span class="faq-plus">+</span>
+          </button>
+          <div class="faq-body">
+            <p>O AdolescenteMente é um projeto/grupo voltado a conteúdos, orientações e trocas sobre desenvolvimento emocional, adolescência e fortalecimento familiar.</p>
           </div>
         </div>
 
@@ -1084,8 +1270,7 @@
         <h2>Talvez o primeiro passo seja simplesmente <em>conversar.</em></h2>
 
         <p class="contact-intro">
-          Buscar apoio é um ato de cuidado. Você não precisa chegar com todas
-          as respostas — basta começar.
+          Buscar apoio é um ato de cuidado. Você não precisa chegar com todas as respostas — basta começar.
         </p>
 
         <div class="contact-details">
@@ -1095,15 +1280,15 @@
           </div>
           <div>
             <strong>Localização</strong>
-            Guaratuba — Paraná · Online (todo o Brasil)
+            Guaratuba — Paraná · Atendimento Online (Brasil e Exterior)
           </div>
           <div>
             <strong>Horários</strong>
             Segunda a sexta — 9h às 18h
           </div>
           <div>
-            <strong>Credencial</strong>
-            CRP {{CRP}}
+            <strong>Atuação</strong>
+            Psicanálise · Neuropsicopedagogia · Parentalidade Consciente
           </div>
         </div>
       </div>
@@ -1122,7 +1307,7 @@
 
           <div class="field">
             <label for="message">O que você gostaria de conversar?</label>
-            <textarea id="message" placeholder="Pode escrever brevemente."></textarea>
+            <textarea id="message" placeholder="Pode escrever brevemente sobre sua necessidade."></textarea>
           </div>
 
           <button class="submit" type="submit">Enviar pelo WhatsApp →</button>
@@ -1139,21 +1324,20 @@
   <div class="container footer">
     <div>
       <div class="footer-brand">Andreza Menezes</div>
-      <div>Terapeuta Familiar · Adolescência · Bullying</div>
+      <div>Psicanalista · Pedagoga · Especialista em Comportamento Adolescente</div>
     </div>
 
     <div class="footer-links">
       <a href="https://www.instagram.com/andrezamenezes.terapeuta/" target="_blank" rel="noopener">Instagram</a>
       <a href="https://www.facebook.com/andrezamenezes.oficial/" target="_blank" rel="noopener">Facebook</a>
       <a href="https://linktr.ee/andrezamenezes" target="_blank" rel="noopener">Linktree</a>
-      <a href="https://site.cfp.org.br/" target="_blank" rel="noopener">CFP</a>
     </div>
 
     <div>© 2026 Andreza Menezes · Todos os direitos reservados.</div>
   </div>
 </footer>
 
-<a class="wa" href="https://wa.me/554198000034?text=Ol%C3%A1.%20Vi%20o%20site%20da%20Andreza%20e%20gostaria%20de%20saber%20mais." target="_blank" rel="noopener" aria-label="Falar pelo WhatsApp">
+<a class="wa" href="https://wa.me/554198000034?text=Ol%C3%A1%2C%20Andreza!%20Vi%20seu%20site%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener" aria-label="Falar pelo WhatsApp">
   <svg viewBox="0 0 24 24" aria-hidden="true">
     <path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.6 4.1 1.6 5.8L.2 24l6.5-1.7a11.8 11.8 0 0 0 5.4 1.3h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.1-1.3-6.1-3.5-8.3ZM12.1 21.5h-.1c-1.7 0-3.4-.5-4.8-1.4l-.3-.2-3.8 1 1-3.7-.2-.3a9.7 9.7 0 1 1 8.2 4.6Zm5.3-7.3c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.2-.4-2.3-1.4-.8-.7-1.4-1.5-1.6-1.8-.2-.3 0-.5.1-.7.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.6-.1-.2-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1 2.9 1.1 3.1c.1.2 2 3.1 4.8 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.8-.7 2-1.3.3-.6.3-1.2.2-1.3-.1-.1-.3-.2-.6-.4Z"/>
   </svg>
@@ -1176,7 +1360,7 @@
     });
   });
 
-  // FAQ
+  // FAQ Accordion
   document.querySelectorAll('.faq-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       const item = btn.closest('.faq-item');
@@ -1207,7 +1391,7 @@
 
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-  // Carrossel de livros — troca automática a cada 5 segundos
+  // Carrossel de livros
   const booksSection = document.querySelector('.books');
   const bookSlides = Array.from(document.querySelectorAll('.book-slide'));
   const bookTabs = Array.from(document.querySelectorAll('.book-tab'));
