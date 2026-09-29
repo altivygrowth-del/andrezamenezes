@@ -223,13 +223,18 @@
       border-radius:50% 50% 9% 9% / 40% 40% 7% 7%;
       pointer-events:none;
     }
-    .portrait-frame img{
+    .portrait-photo{
+      overflow:hidden;
+      border-radius:50% 50% 6% 6% / 40% 40% 5% 5%;
+    }
+    .portrait-photo img{
       width:100%;
       aspect-ratio:4/5;
       object-fit:cover;
-      object-position:center top;
+      object-position:center 30%;
       filter:saturate(.9);
-      border-radius:50% 50% 6% 6% / 40% 40% 5% 5%;
+      transform:scale(1.12);
+      transform-origin:center 85%;
     }
     .hero-stamp{
       position:absolute;
@@ -903,7 +908,9 @@
       <div class="hero-visual reveal">
         <div class="portrait-frame">
           <div class="hero-stamp">+5 ANOS<br><span>DE EXPERIÊNCIA</span></div>
-          <img src="andreza - foto inicio.jpg" alt="Andreza Menezes, psicanalista e educadora parental" />
+          <div class="portrait-photo">
+            <img src="andreza - foto inicio.jpeg" alt="Andreza Menezes, psicanalista e educadora parental" />
+          </div>
           <div class="portrait-caption">
             <strong>Escuta, acolhimento e orientação.</strong>
             <span>Mães · Famílias · Educadores · Adolescentes</span>
