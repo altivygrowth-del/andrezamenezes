@@ -986,6 +986,21 @@
       .contact-form{padding:23px}
       .wa{right:17px;bottom:17px}
     }
+
+    /* LIVROS — responsivo (corrige botões fora da tela no mobile) */
+    @media(max-width:900px){
+      .book-slide{grid-template-columns:1fr;gap:28px;min-height:0}
+      .book-stage{min-height:0;padding:10px 0 30px}
+      .book-cover{max-width:min(260px,70vw);height:auto}
+    }
+    @media(max-width:560px){
+      .books{padding:80px 0 70px}
+      .book-cta{width:100%}
+      .book-tab{grid-template-columns:1fr;justify-items:center;padding:10px 4px;gap:6px;text-align:center}
+      .book-tab img{width:38px;height:52px}
+      .book-tab-title{display:none}
+      .book-tab-number{font-size:16px;margin:0}
+    }
   </style>
 </head>
 
@@ -1569,7 +1584,7 @@
   booksSection.addEventListener('mouseenter',()=>{clearInterval(bookInterval);clearInterval(timerInterval);booksTimer.textContent='Carrossel pausado';});
   booksSection.addEventListener('mouseleave',()=>{timerStartedAt=Date.now();updateBooksTimer();bookInterval=setInterval(()=>showBook(currentBook+1,true),BOOK_DURATION);timerInterval=setInterval(updateBooksTimer,250);});
   let touchStartX=0;
-  booksSection.addEventListener('touchstart',e=>{touchStartX=e.changedTouches[0].screenX},{passive:true});
+  booksSection.addEventListener('touchstart',e=>{touchStartX=e.changedTouches[0].screenX;clearInterval(bookInterval);clearInterval(timerInterval);booksTimer.textContent='Carrossel pausado';},{passive:true});
   booksSection.addEventListener('touchend',e=>{const distance=e.changedTouches[0].screenX-touchStartX;if(Math.abs(distance)>45)showBook(distance<0?currentBook+1:currentBook-1,true)},{passive:true});
   showBook(0,true);
 
